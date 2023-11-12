@@ -1,7 +1,11 @@
-<div style="display: flex; flex-direction: row; padding-bottom: 30px;">
+<!-- <div style="display: flex; flex-direction: row; padding-bottom: 30px;">
   <img src="https://raw.githubusercontent.com/github/explore/main/topics/javascript/javascript.png" width="50"/>
   <p style="padding-left: 30px; font-weight: 700; font-size: 1.5rem;">Fast helper in practic JS, OOP JS</p>
-</div>
+</div> -->
+
+ <img src="https://raw.githubusercontent.com/github/explore/main/topics/javascript/javascript.png" width="50"/>
+
+## Fast helper in practic JS, OOP JS
 
 This repository contains code examples for learning js, as well as many examples for practical use in various projects.
 
