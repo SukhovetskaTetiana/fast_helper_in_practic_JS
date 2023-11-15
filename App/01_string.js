@@ -1,4 +1,4 @@
-/** All about String */
+/** 01_String */
 
 /** 01. theory block */
 const nameFirst = "Tetiana";
