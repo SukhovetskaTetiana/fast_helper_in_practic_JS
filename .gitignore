@@ -1,7 +1,16 @@
 /node_modules
 
-13_template-literals.html
-13_template-literals.js
-
 04_array-methods.html
 04_array-methods.js
+
+14_oop_4basic_principles.html
+14_oop_4basic_principles.js
+
+15_oop_get-set.html
+15_oop_get-set.js
+
+16_oop_static.html
+16_oop_static.js
+
+17_call_apply_bind.html
+17_call_apply_bind.js
