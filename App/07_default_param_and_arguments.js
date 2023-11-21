@@ -3,10 +3,13 @@
 /** Параметри функції за замовчуванням */
 // use function pow()
 
+// початкова умова
 function pow(a, b) {
   return a ** b;
 }
 console.log(pow(2, 3)); // 8
+
+// Example_1
 
 // function pow(a, b) {
 //   console.log(a); // undefined
@@ -15,23 +18,30 @@ console.log(pow(2, 3)); // 8
 // }
 // console.log(pow()); // NaN
 
-// параметри функції за замовчуванням
+// Example_2 => параметри функції за замовчуванням
 // function pow(a = 1, b = 1) {
 //   return a ** b;
 // }
 // console.log(pow()); // 1
 
+// Example_3
 // function pow(a = 1, b = 1) {
 //   return a ** b;
 // }
 // console.log(pow(2)); // 2
 // console.log(pow(2, 3)); // 8
 
-//інший спосіб передачі параметрів
+// Example_4 => інший спосіб передачі параметрів
 // function pow(a = 1, b = a + 1) {
 //   return a ** b;
 // }
 // console.log(pow(2, 3));
+
+// Example_5 => якщо передається до функції тільки другий параметр
+// function pow(a = 1, b = 1) {
+//   return a ** b;
+// }
+// console.log(pow(undefined, 3)); // => (a = 1, b = 3)
 
 /** Аргументи - об'єкт чи псевдо-масив який містить всі аргументи які передавалися в функцію під час її виклику */
 
