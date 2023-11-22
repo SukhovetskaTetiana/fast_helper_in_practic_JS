@@ -3,9 +3,6 @@
 04_array-methods.html
 04_array-methods.js
 
-14_oop_4basic_principles.html
-14_oop_4basic_principles.js
-
 15_oop_get-set.html
 15_oop_get-set.js
 
@@ -14,3 +11,6 @@
 
 17_call_apply_bind.html
 17_call_apply_bind.js
+
+18_oop_agregation&composition.html
+18_oop_agregation&composition.js
