@@ -74,3 +74,19 @@ function changeElem() {
 // const data = [2, 4, 6, 8];
 // function reducer(total, value) { return total + value; }
 // const sum = data.reduce(reducer); // 20
+
+//Create a method each_cons that accepts a list and a number n, and returns cascading subsets of the list of size n, like so: each_cons([1,2,3,4], 2) #=> [[1,2], [2,3], [3,4]]
+
+function eachCons(array, n) {
+  const res = [];
+  for (let i = 0; i <= array.length - n; i += 1) {
+    let arr = array.slice(i, i + n);
+    res.push(arr);
+  }
+
+  console.log(res);
+  return res;
+}
+eachCons([3, 5, 8, 13], 1); // [[3], [5], [8], [13]]
+eachCons([3, 5, 8, 13], 2); // [[3,5], [5,8], [8,13]]
+eachCons([3, 5, 8, 13], 3); // [[3,5,8], [5,8,13]]
