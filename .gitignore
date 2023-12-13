@@ -7,9 +7,6 @@
 04_associative_array.html
 04_associative_array.js
 
-15_oop_get-set.html
-15_oop_get-set.js
-
 16_oop_static.html
 16_oop_static.js
 
@@ -33,3 +30,15 @@
 
 23_exceptions_try-catch.html
 23_exceptions_try-catch.js
+
+24_dom.html
+24_dom.js
+
+25_web-storage.html
+25_web-storage.js
+
+26_web-worker.html
+26_web-worker.js
+
+27_web-sockets.html
+27_web-sockets.js
