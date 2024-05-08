@@ -15,3 +15,11 @@ function doubleBoolean() {
   console.log(bln); // true
   console.log(typeof bln); // "boolean"
 }
+
+function printOddNumbers(num) {
+  for (let i = 1; i <= num; i += 2) {
+    console.log(i);
+  }
+}
+
+printOddNumbers(5);
