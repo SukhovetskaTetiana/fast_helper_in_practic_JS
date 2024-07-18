@@ -1,0 +1,19 @@
+body {
+  max-width: 750px;
+  margin: auto;
+}
+
+button {
+  background: linear-gradient(to right, #2e95ff, #0061c6);
+  color: white;
+  border: none;
+  font: 400 2rem system-ui;
+  margin: 20px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0053a8;
+}
