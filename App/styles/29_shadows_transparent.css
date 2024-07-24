@@ -1,0 +1,37 @@
+body {
+  max-width: 750px;
+  margin: auto;
+  background-color: black;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 60px;
+  margin-top: 100px;
+}
+
+img {
+  width: 150px;
+}
+
+.block {
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 10px 10px 50px #007bfa;
+}
+
+/* додає елементам тінь з використанням властивості filter*/
+.shadow {
+  filter: drop-shadow(10px 10px 50px #007bfa);
+}
+
+/*
+10px — зсув тіні по горизонталі. Позитивне значення зміщує тінь праворуч, а негативне — ліворуч;
+10px — зсув тіні по вертикалі. Позитивне значення зміщує тінь вниз, а негативне — вгору;
+50px — розмиття тіні. Чим більше значення, тим більше розмитою буде тінь;
+#007bfa — колір тіні. У цьому випадку використовується синій колір з шістнадцятковим кодом #007bfa.
+*/
