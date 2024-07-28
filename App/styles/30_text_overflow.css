@@ -1,0 +1,37 @@
+body {
+  max-width: 750px;
+  margin: auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  justify-content: space-evenly;
+  height: 60px;
+  width: 250px;
+  background: linear-gradient(to right, #2e95ff, #0061c6);
+  color: white;
+  border: none;
+  font: 400 2rem system-ui;
+  margin: 20px;
+  padding: 5px 30px;
+  border-radius: 10px;
+}
+
+.container h3 {
+  margin: 0;
+  font-weight: 700;
+  font-size: medium;
+}
+.container p {
+  margin: 0;
+  font-size: medium;
+}
+
+/* Example: Handle text overflow */
+.text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
