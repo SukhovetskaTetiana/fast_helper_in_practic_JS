@@ -302,3 +302,50 @@ function leaveHoloMessage(name) {
 
 processCalls("Mango", takeCall, activateAnsweringMachine);
 processCalls("Poly", takeCall, leaveHoloMessage);
+
+//======Example 8 ===============
+// callback function
+function myDisplaer(sum) {
+  console.log("Total sum is: " + sum);
+}
+// function
+function myCalculator(num, myCallback) {
+  let sum = num + 5;
+  myCallback(sum);
+}
+// passing myDisplaer function as an argument to the myCalculator function
+myCalculator(8, myDisplaer);
+/**
+ * Output
+ * Total sum is: 13
+ *  */
+
+//======Example 9 - Example of Async. Task ===============
+
+// a function that simulates a time-consuming task
+function heavyTask(callback) {
+  setTimeout(() => {
+    console.log("Heavy task finished!");
+    callback();
+  }, 2000);
+}
+
+// A function that is called after the heavy task is compleated
+function done() {
+  console.log("Done!");
+}
+
+console.log("Starting...");
+
+// Calling the heavy task and passing the 'done' function as a callback
+
+heavyTask(done);
+
+console.log("Continuing with other work...");
+
+/** Output:
+ *  Starting...
+ *  Continuing with other work...
+ *  Heavy task finished!
+ *  Done!
+ */
