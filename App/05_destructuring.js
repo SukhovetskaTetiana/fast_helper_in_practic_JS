@@ -1,9 +1,9 @@
 /** 05_Destructuring */
 /** syntax of destructuring assignment - синтаксис деструктуризаціного присвоєння */
 
-/** 05_1. Object - об'єкти */
+/** 05_1. ======= Object - об'єкти ======== */
 
-// We have an Object/
+// 05_1.1. We have an Object/
 const user = {
   id: 25,
   isVerified: true,
@@ -28,7 +28,56 @@ const user = {
 // console.log(number); // 25
 // console.log(isApproved); // true
 
-/** 05_2. Arrays - масиви*/
+// 05_1.2. 'person' object and two function ('createUser1' and 'createUser2')
+// 'person' Object
+const person = {
+  name: "Bart",
+  job: "Student",
+  parents: ["Homer", "Marge"],
+};
+
+// Object Destructuring
+const { name, job, parents } = person;
+console.log(name, job, parents);
+
+// Array Destructuring
+const [father, mather] = parents;
+console.log(father, mather);
+
+// 'createUser1' Function
+function createUser1(person1) {
+  const id = Math.floor(Math.random() * 9999);
+  return {
+    id: id,
+    name: person1.name,
+    job: person1.job,
+    parents: person1.parents,
+  };
+}
+console.log(createUser1(person));
+
+// 'createUser2' Function
+function createUser2({ name, job, parents }) {
+  const id = Math.floor(Math.random() * 9999);
+  const [father] = parents;
+  return {
+    id,
+    name,
+    job,
+    father,
+  };
+}
+console.log(createUser2(person));
+
+// console result
+// { id: 8924, name: 'Bart', job: 'Student', father: 'Homer' }
+// id: 8924
+// name: 'Bart'
+// job: 'Student'
+// father: 'Homer'
+// [[Prototype]]:Object
+
+/** 05_2. ======= Arrays - масиви =========*/
 // We have an Array/
 const numbers = ["one", "two", "three", "four"];
 
