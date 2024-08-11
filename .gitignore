@@ -1,7 +1,6 @@
 /node_modules
 /own_folder
 
-32_axios.html
 32_axios.js
 
 33_css_selectors.html
@@ -15,3 +14,21 @@
 
 36_css_position.html
 36_css_position.css
+
+37_css_background.html
+37_css_background.css
+
+38_css_font.html
+38_css_font.css
+
+39_css_text.html
+39_css_text.css
+
+40_css_transition.html
+40_css_transition.css
+
+41_css_animation.html
+41_css_animation.css
+
+42_css_transform.html
+42_css_transform.css
