@@ -1,0 +1,11 @@
+/* ======= Selectors =======
+
+/* => *{} => Universal Selector
+/* => #id {} => ID Selector
+/* => .class {} => Class Selector
+/* => h1, h2{} => Type Selector
+/* => h1+p {} => Adjacent Sibling Selector
+/* => ul > li{} => Child Selector
+/* => h1 ~ p {} => General Sibling Selector
+/* => p a{} => Descendant Selector
+/* => div[att='val']{} => Attribute Selector
