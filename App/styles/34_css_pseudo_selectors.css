@@ -1,0 +1,29 @@
+/* ======= Pseudo Selectors =======
+
+/* => :active                    => Activated element
+/* => :focus                     => Focused element
+/* => :hover                     => Focused element
+/* => :link                      => Unvisited link
+/* => :disabled                  => Disabled element
+/* => :enabled                   => Enabled element
+/* => :checked                   => Checked element
+/* => :nth-child(n)              => N-th sibling
+/* => :nth-last-child(n)         => N-th sibling from the end
+/* => :first-child               => First sibling 
+/* => :last-child                => Last sibling 
+/* => :only-child                => Only sibling 
+/* => :nth-of-type(n)            => N-th sibling of its type 
+/* => :nth-last-of-type(n)       => N-th sibling of its type from end 
+/* => :last-of-type              => Last sibling of its type  
+/* => :first-of-type             => First sibling of its type  
+/* => :only-of-type              => Only child of its type  
+/* => :empty                     => Element with no children  
+/* => :root                      => Root element  
+/* => :not(x)                    => Element not matching 'x'
+/* => :target                    => Target element specified by a URI
+
+/* => ::first-letter             => Style for the first letter of text
+/* => ::first-line               => Style for the first line of text
+/* => ::before                   => Insert content before an element
+/* => ::after                    => Insert content after an element
+
