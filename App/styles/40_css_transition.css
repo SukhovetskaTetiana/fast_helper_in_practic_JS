@@ -1,0 +1,13 @@
+/* ======= Transition ======= */
+
+/* transition-timing-function: ease | linear | ease-in | ease-out | 
+                              | ease-in-oyt | cubic-Bezier(num,num,num,num);
+
+/* transition-property: none | all
+
+/* transition-delay: time;
+
+/* transition-duration: time;
+
+/* transition: transition-property transition-duration
+              transition-timing-function transition-delay
