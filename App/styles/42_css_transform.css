@@ -1,0 +1,18 @@
+/* ======= Animation ======= */
+
+/* => 2D Transform */
+/* transform: translate(x, y):        Translate (move) element 
+/* transform: rotate(angle):          Rotate element around a specified angle
+/* transform: scale(x, y):            Scale element
+/* transform: skew(x-ang, y-ang)      Skew (slant) element
+/* transform: skewX(angle)            Skew (slant) element along the X-axis
+/* transform: skewY(angle)            Skew (slant) element along the Y-axis
+
+
+/* => 3D Transform */
+/* transform: translate3d(x, y, z):     Translate (move) element 
+/* transform: rotateX(angle):           Rotate element around the X-axis
+/* transform: rotateY(angle):           Rotate element around the Y-axis
+/* transform: rotateZ(angle):           Rotate element around the Z-axis
+/* transform: scale3d(x, y, z):         Scale element
+/* transform: perspective(value)        Set the perspective xiew
