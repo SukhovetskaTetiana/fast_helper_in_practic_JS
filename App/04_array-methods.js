@@ -1,5 +1,162 @@
 /** 04_Methods of Array */
 
+// 1. values(): This method returns an iterator that provides the values for each index in the array. It takes no arguments.
+
+const arr = ["apple", "banana", "cherry"];
+const iterator = arr.values();
+
+for (const values of iterator) {
+  console.log(value);
+}
+//Output: apple banana cherry
+
+// 2. length(): This property returns the length of the array.
+
+const arr = ["apple", "banana", "cherry"];
+console.log(arr.length);
+// Output: 3
+
+// 3. reverse(): This method reverses the order of the elements in the array.
+
+const arr = ["apple", "banana", "cherry"];
+arr.reverse();
+console.log(arr);
+//Output: ['cherry', 'banana', 'apple']
+
+// 4. sort(): This method sorts the elements of an array in place and return the sorted array. It can take an optional compare function as an argument.
+
+const arr = ["banana", "apple", "cherry"];
+arr.sort();
+console.log(arr);
+// Output: ['apple', 'banana', 'cherry']
+
+// 5. at(): This method returns the element at the spesified index in the array. It takes one argument: the index.
+
+const arr = ["apple", "banana", "cherry"];
+console.log(arr.flat(1));
+// Output: 'banana'
+
+// 6. fill(): This method fills all the elements af an array from a start index to an end index with a static value. It can take up to three arguments: the value to fill with, the start index, and the end index.
+
+const arr = ["apple", "banana", "cherry"];
+arr.fill("orange", 1, 2);
+console.log(arr);
+// Output: ['apple', 'orange', 'cherry']
+
+// 7. from(): This method creates a new array from an array-like object or an iterable object. It can take up to two arguments: the object to convert to an array, and a mapping function to apply to each element of the new array.
+
+const obj = { 0: "apple", 1: "banana", 2: "cherry", length: 3 };
+const arr = Array.from(obj);
+console.log(arr);
+// Output: ['apple', 'banana', 'cherry']
+
+// 8. join(): This method joins all the elements of an array into a string using a specified separator. It takes one optional argument: the separator to use.
+
+const arr = ["apple", "banana", "cherry"];
+const str = arr.join(", ");
+console.log(str);
+// Output: 'apple, banana, cherry'
+
+// 9. toString(): This method returns a string representing the array and its elements.
+
+const arr = ["apple", "banana", "cherry"];
+const str = arr.toString();
+console.log(str);
+// Output: 'apple,banana,cherry'
+
+// 10. pop(): This method removes the last element from an array and returns that element.
+
+const arr = ["apple", "banana", "cherry"];
+const last = arr.pop();
+console.log(last); // Output: 'cherry'
+console.log(arr); // Output: ['apple', 'banana']
+
+// 11. forEach(): method executes a provided function once for each array element. It doesn`t return anything, it just executes the callback function on each element of the array.
+
+let fruits = ["apple", "banana", "cherry"];
+fruits.forEach(function (item) {
+  console.log(item);
+});
+// Output: apple, banana, cherry
+
+// 12. shift() method removes the first element from an array and returns that rwmovwd element. This method changes the length of the array.
+
+let fruits = ["apple", "banana", "cherry"];
+let shiftFruit = fruits.shift();
+console.log(shiftFruit); // Output: 'apple'
+console.log(fruits); // Output: ['banana', 'cherry']
+
+// 13. copyWithin() method shallow copies part of an array to another location in the same array and returns the modified array without modifying its length.Syntax.copyWithin(target, start, end)
+
+let numbers = [1, 2, 3, 4, 5];
+numbers.copyWithin(2, 0, 2);
+console.log(numbers); // Output: [1, 2, 1, 2, 5]
+
+// 14. push(): method adds one or more elements to the end of an array and returns the new length of the array.
+
+let fruits = ["apple", "banana"];
+fruits.push("cherry", "orange");
+console.log(fruits);
+// Output: ['apple', 'banana', 'cherry', 'orange']
+
+// 15. unshift(): method adds one or more elements to the beginning of an array and returns the new length of the array.
+
+let fruits = ["cherry", "orange"];
+fruits.unshift("apple", "banana");
+console.log(fruits);
+// Output: ['apple', 'banana', 'cherry', 'orange']
+
+// 16. concat(): method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.
+
+let fruits = ["apple", "banana"];
+let moreFruits = ["cherry", "orange"];
+let allFruits = fruits.concat(moreFruits);
+console.log(allFruits);
+// Output: ['apple', 'banana', 'cherry', 'orange']
+
+// 17. splice(): method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+
+const fruits = ["apple", "banana", "cherry", "orange"];
+// Syntax: arr.splice(start, deleteCount, item1,... itemN)
+fruits.splice(2, 1, "mango", "kiwi");
+console.log(fruits);
+// Output: ["apple", "banana", 'mango', 'kiwi', "orange"];
+
+// 18. flat(): This method creates a new array with all sud-array elements concatenated into it recursively up to the specified depth.
+
+const numbers = [1, [2, [3]], 4];
+const flatNumbers = numbers.flat(Infinity);
+console.log(flatNumbers);
+// Output: [1, 2, 3, 4]
+
+// 19. lastIndexOf(): This method returns the last index at which a given element can be found in the array.
+
+const numbers = [1, 2, 3, 4, 5, 3];
+const lastIndex = numbers.lastIndexOf(3);
+console.log(lastIndex);
+// Output: 5
+
+// 20. indexOf(): This method returns the index of the first occurrence of a specified element ai an array. If the element is not present, it returns -1.
+
+const arr = [5, 10, 15, 20];
+const index = arr.indexOf(10);
+console.log(index); // Output: 1
+
+// 21. of(): This method creates a new array instance with a variable number of arguments, regardless of number or type of the arguments.
+
+const arr = Array.of(1, 2, 3, "four", true);
+console.log(arr);
+// Output: [1, 2, 3, 'four', true]
+
+// 22. every(): This method checks if all elements in an array pass a test (provided as a function). It returns true if all elements pass the test; otherwise, it returns false.
+
+const arr = [2, 4, 6, 8];
+const isEven = (num) => num % 2 === 0;
+const result = arr.every(isEven);
+console.log(result); // Output: true
+
+// 23. slice(): This method
+
 // => ======================= sort ===============================
 let str = ["s", "a", "f"];
 // str.sort(); // ['a', 'f', 's'];
@@ -11,6 +168,11 @@ const numChange = [5, 3, 6, 4];
 
 // => =================== forEach(func) ================================
 // calls func for each element(enumeration)
+let fruits = ["apple", "banana", "cherry"];
+fruits.forEach(function (item) {
+  console.log(item);
+});
+// Output: apple, banana, cherry
 
 //=> =================== filter ============================
 // creates a new array with all the elements tested by the specified function;
@@ -26,7 +188,7 @@ const brands = ["HNC", "IphOne", "nokiA", "SAmSung", "Xiaomi", "Lg"];
 const outputBrandsName = brands.map((brand) => brand.toUpperCase());
 console.log(outputBrandsName); // ['HNC', 'IPHONE', 'NOKIA', 'SAMSUNG', 'XIAOMI', 'LG']
 
-// => ================= reducde ========================
+// => ================= reduce ========================
 // performs the reducer function you specified for each element of the array and returns a single value.
 const orderPrice = [140, 530, 560, 123, 900];
 let res = orderPrice.reduce((sum, current) => {
