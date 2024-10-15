@@ -25,10 +25,20 @@ console.log(arr);
 
 // 4. sort(): This method sorts the elements of an array in place and return the sorted array. It can take an optional compare function as an argument.
 
+// Example 4.1
 const arr = ["banana", "apple", "cherry"];
 arr.sort();
 console.log(arr);
 // Output: ['apple', 'banana', 'cherry']
+
+// Example 4.2
+let str = ["s", "a", "f"];
+// str.sort(); // ['a', 'f', 's'];
+
+const numChange = [5, 3, 6, 4];
+// numChange.sort((a, b) => a - b); // numChange = [3, 4, 5, 6]
+// numChange.sort((a, b) => b - a); // numChange = [6, 5, 4, 3]
+// numChange.sort((a, b) => 0.5 - Math.random()); // numChange = [3, 5, 4, 6]
 
 // 5. at(): This method returns the element at the spesified index in the array. It takes one argument: the index.
 
@@ -155,40 +165,67 @@ const isEven = (num) => num % 2 === 0;
 const result = arr.every(isEven);
 console.log(result); // Output: true
 
-// 23. slice(): This method
+// 23. slice(): This method returns a shallow copy of a portion of an array into a new array object selected from begin to end (end not included).
 
-// => ======================= sort ===============================
-let str = ["s", "a", "f"];
-// str.sort(); // ['a', 'f', 's'];
+const arr = [1, 2, 3, 4, 5];
+const slicedArr = arr.slice(2, 4);
+console.log(slicedArr); // Output: [3, 4]
 
-const numChange = [5, 3, 6, 4];
-// numChange.sort((a, b) => a - b); // numChange = [3, 4, 5, 6]
-// numChange.sort((a, b) => b - a); // numChange = [6, 5, 4, 3]
-// numChange.sort((a, b) => 0.5 - Math.random()); // numChange = [3, 5, 4, 6]
+// 24. flatMap(): This method maps each element using a mapping function, then flattens the result into a new array.
 
-// => =================== forEach(func) ================================
-// calls func for each element(enumeration)
-let fruits = ["apple", "banana", "cherry"];
-fruits.forEach(function (item) {
-  console.log(item);
+const arr = [1, 2, 3];
+const result = arr.flatMap((x) => [x * 2]);
+console.log(result);
+// Output: [2, 4, 6]
+
+// 25. findIndex(): This method returns the index of the first element ina array that passes a test (provided a a function). If no element passes the test, it returns -1.
+
+const arr = [10, 20, 30, 40, 50];
+const greaterThan30 = (num) => num > 30;
+const index = arr.findIndex(greaterThan30);
+console.log(index); // Output: 3
+
+// 26. find(): This method returns the value of the first element in an array that passed a test (provided as a function). If no element passed the test, it returns undefined.
+
+const arr = [10, 20, 30, 40, 50];
+const greaterThan30 = (num) => num > 30;
+const result = arr.find(greaterThan30);
+console.log(result); // Output: 40
+
+// 27. includes(): This method determines whether an array includes a certain value among ist entries, returning true or false as appropriate.
+
+const arr = [10, 20, 30, 40, 50];
+const has20 = arr.includes(20);
+console.log(has20); // Output: true
+
+// 28. entries(): This method returns a new Array Iterator object that contains the key/value pairs for each index in the array.
+
+const arr = ["a", "b", "c"];
+const iterator = arr.entries();
+console.log(iterator.next().value); // Output: [0, 'a']
+console.log(iterator.next().value); // Output: [1, 'b']
+console.log(iterator.next().value); // Output: [2, 'c']
+
+// 29. reduce(): This method applies a function to each element of an array and reduces the array to a single value.
+
+const numbers = [10, 20, 30, 40];
+// accumulator: It is the value returned from the previous iteration of the function.
+// currentValue: It is the current element being processed in the array.
+const sum = numbers.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue;
 });
-// Output: apple, banana, cherry
+console.log(sum); // Output: 100
 
-//=> =================== filter ============================
-// creates a new array with all the elements tested by the specified function;
-const phonePrice = [400, 700, 3000, 1200, 8000, 1500, 100, 3200, 4600];
-const filterPricePhone = phonePrice.filter((item) => {
-  return item >= 700 && item <= 3000;
+// 30. reduceRight(): This method is similar to the reduce() method. However, it iterates over the array elements from right to left instead of from left to right.
+
+// Example 30.1
+const numbers = [10, 20, 30, 40];
+const sum = numbers.reduceRight((accumulator, currentValue) => {
+  return accumulator + currentValue;
 });
-console.log(filterPricePhone); // [700, 3000, 1200, 1500]
+console.log(sum); // Output: 100
 
-// => ===================== map =======================
-// creates a new array with the results of calling a function for every array element;
-const brands = ["HNC", "IphOne", "nokiA", "SAmSung", "Xiaomi", "Lg"];
-const outputBrandsName = brands.map((brand) => brand.toUpperCase());
-console.log(outputBrandsName); // ['HNC', 'IPHONE', 'NOKIA', 'SAMSUNG', 'XIAOMI', 'LG']
-
-// => ================= reduce ========================
+// Example 30.2
 // performs the reducer function you specified for each element of the array and returns a single value.
 const orderPrice = [140, 530, 560, 123, 900];
 let res = orderPrice.reduce((sum, current) => {
@@ -204,6 +241,52 @@ console.log(`Total price: ${res}`);
  * 1353 => 900
  * Total price: 2253
  */
+
+// 31. isArray: This method determines whether the passed value is an array or not.
+
+const fruits = ["apple", "banana", "mango"];
+console.log(Array.isArray(fruits)); // Output: true
+
+const number = 123;
+console.log(Array.isArray(number)); // Output: false
+
+// 32. filter(): This method creates a new array with all elements that pass the test implemented by the provided function.
+
+// Example 32.1
+const numbers = [10, 20, 30, 40];
+const filterNumbers = numbers.filter((number) => {
+  return number > 20;
+});
+console.log(filterNumbers); // Output: [30, 40]
+
+// Example 32.2
+// creates a new array with all the elements tested by the specified function;
+const phonePrice = [400, 700, 3000, 1200, 8000, 1500, 100, 3200, 4600];
+const filterPricePhone = phonePrice.filter((item) => {
+  return item >= 700 && item <= 3000;
+});
+console.log(filterPricePhone); // [700, 3000, 1200, 1500]
+
+// 33. keys(): This method returns an array containing the keys of the given object.
+
+const myObj = { a: 1, b: 2, c: 3 };
+const keysArray = Object.keys(myObj);
+console.log(keysArray); // Output: ['a', 'b', 'c']
+
+// 34. map(): This method creates a new array with the results of calling a provided function on every element in the calling array.
+
+// Example 34.1
+const numbers = [1, 2, 3, 4, 5];
+const squaredNumbers = numbers.map((number) => {
+  return number * number;
+});
+console.log(squaredNumbers); // Output: [1, 4, 9, 16, 25]
+
+// Example 34.2
+// creates a new array with the results of calling a function for every array element;
+const brands = ["HNC", "IphOne", "nokiA", "SAmSung", "Xiaomi", "Lg"];
+const outputBrandsName = brands.map((brand) => brand.toUpperCase());
+console.log(outputBrandsName); // ['HNC', 'IPHONE', 'NOKIA', 'SAMSUNG', 'XIAOMI', 'LG']
 
 // ============================== EXAMPLES ================================
 // exp_01
